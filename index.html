@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="keywords" content="sass,compass">
+<meta name="description" content="sass,compass test">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.masic.js"></script>
+<script>
+$(function(){
+$('body').masic();
+});
+</script>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	height: 100%;
+	background: -webkit-linear-gradient(#79e6f7 0%, #e9deb9 100%)
+}
+
+[class*=masic] {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border: none;
+	background: url(img/img.png);
+	background-size: 100%;
+
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+}
+[class*=masic]:nth-child(odd){
+	-webkit-animation-name: kirakira1;
+}
+
+[class*=masic]:nth-child(even){
+	-webkit-animation-name: kirakira2;
+}
+
+[class*=masic] img {
+	width: 100%;
+	height: auto;
+}
+
+@-webkit-keyframes kirakira1{
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes kirakira2{
+	0% {
+		opacity: 1
+	}
+	100% {
+		opacity: 0
+	}
+}
+
+</style>
+<title>jquery.masic</title>
+</head>
+<body>
+</body>
+</html>
